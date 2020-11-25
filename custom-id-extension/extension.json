@@ -1,17 +1,17 @@
 {
-  "id": "default-field-value",
-  "name": "Default value for a field",
+  "id": "content-custom-id",
+  "name": "Auto generated custom id",
   "srcdoc": "extension.html",
   "fieldTypes": ["Symbol"],
   "parameters": {
     "instance": [
       {
-        "id": "defaultColor",
+        "id": "customId",
         "name": "Default color",
-        "description": "Set which color is the default color",
-        "type": "Enum",
-        "options": [{"#0000FF": "blue"}, {"#FFFF00": "yellow"}, {"#FF0000": "red"}],
-        "labels": {"empty": "Choose a color"},
+        "description": "Select",
+        "type": "Text",
+        "default": "RES9939292",
+        "labels": {"empty": "Custom Id"},
         "required": true
       }
     ]

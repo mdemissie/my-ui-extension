@@ -8,7 +8,7 @@
 <body>
   <div class="cf-form-field">
     <input type="text" class="cf-form-input">
-    <div class="cf-form-hint">I am a UI Extension with a default value:
+    <div class="cf-form-hint"> UI Extension to generate content custom id:
       <span class="default-value"></span>
     </div>
   </div>
@@ -26,15 +26,15 @@
       inputEl.addEventListener('input', keyboardInputHandler);
       window.addEventListener('onbeforeunload', unloadHandler);
 
-      var defaultColor = extension.parameters.instance.defaultColor;
-      var defaultColorText = document.createTextNode(defaultColor || 'none');
-      document.querySelector('.default-value').appendChild(defaultColorText);
+      var customId = extension.parameters.instance.customId;
+      var customIdText = document.createTextNode(customId || 'none');
+      document.querySelector('.default-value').appendChild(customIdText);
 
       var isNewlyCreated = extension.entry.getSys().version < 2;
       var hasNoValue = typeof extension.field.getValue() === 'undefined';
 
       if (isNewlyCreated && hasNoValue) {
-        extension.field.setValue(defaultColor || '');
+        extension.field.setValue(customId || '');
       }
 
       function valueChangeHandler(value) {
@@ -44,7 +44,7 @@
           inputEl.value = value;
         }
 
-        if (/^#([a-f0-9]{3}){1,2}$/i.test(value)) {
+        if (/^[A-Z]{3}[0-9]{7,10}$/i.test(value)) {
           extension.field.setInvalid(false);
           document.querySelector(".cf-form-field").style.borderLeft = "5px solid " + value;
         } else {

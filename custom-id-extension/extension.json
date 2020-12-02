@@ -9,8 +9,7 @@
         "id": "customId",
         "name": "Default color",
         "description": "Select",
-        "type": "Symbol",
-        "default": "RES13242323 : "blue"",        
+        "type": "Symbol",       
         "labels": {"empty": "Custom Id"},
         "required": true
       }

@@ -9,8 +9,7 @@
         "id": "customId",
         "name": "Default color",
         "description": "Select",
-        "type": "Enum",
-        "options": [{"#0000FF": "blue"}, {"#FFFF00": "yellow"}, {"#FF0000": "red"}],
+        "type": "Symbol",
         "labels": {"empty": "Custom Id"},
         "required": true
       }

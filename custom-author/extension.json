@@ -13,7 +13,7 @@
         "options": [
           { "Social": "Social" },
           { "John Doe": "John Doe" },
-          { "Jane Doe": "Jane Doe" },
+          { "Jane Doe": "Jane Doe" }
         ],
         "labels": { "empty": "Choose an Author" },
         "required": true

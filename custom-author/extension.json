@@ -10,11 +10,7 @@
         "name": "Default Author",
         "description": "Set which author is the default",
         "type": "Enum",
-        "options": [
-          { "Social": "Social" },
-          { "John Doe": "John Doe" },
-          { "Jane Doe": "Jane Doe" }
-        ],
+        "options": [{ "Social": "Social" }, { "John Doe": "John Doe" }, { "Jane Doe": "Jane Doe" }],
         "labels": { "empty": "Choose an Author" },
         "required": true
       }

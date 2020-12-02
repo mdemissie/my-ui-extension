@@ -26,8 +26,8 @@
       inputEl.addEventListener('input', keyboardInputHandler);
       window.addEventListener('onbeforeunload', unloadHandler);
 
-      var customId = extension.parameters.instance.customId;
-      var customIdText = document.createTextNode(customId || 'none');
+      var contentTypePrefix = extension.parameters.instance.contentTypePrefix;
+      var customIdText = document.createTextNode(contentTypePrefix+"12338399" || 'none');
       document.querySelector('.default-value').appendChild(customIdText);
 
       var isNewlyCreated = extension.entry.getSys().version < 2;

@@ -10,7 +10,7 @@
         "name": "Default color",
         "description": "Select",
         "type": "Symbol",
-        "default": "RES124345"
+        "default": "RES124345",
         "labels": {"empty": "Custom Id"},
         "required": true
       }

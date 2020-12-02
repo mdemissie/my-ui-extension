@@ -10,10 +10,7 @@
         "name": "Default color",
         "description": "Select",
         "type": "Enum",
-        "options": [
-          { "RES23322": "RES23322" },
-          { "RES23323": "RES23323" }
-        ],
+        "options": [{ "RES23322": "RES23322" }, { "RES23323": "RES23323" }],
         "labels": {"empty": "Custom Id"},
         "required": true
       }

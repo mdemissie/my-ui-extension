@@ -9,8 +9,11 @@
         "id": "customId",
         "name": "Default color",
         "description": "Select",
-        "type": "Text",
-        "default": "RES124345",
+        "type": "Enum",
+        "options": [
+          { "RES23322": "RES23322" },
+          { "RES23323": "RES23323" }
+        ],
         "labels": {"empty": "Custom Id"},
         "required": true
       }

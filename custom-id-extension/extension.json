@@ -6,12 +6,12 @@
   "parameters": {
     "instance": [
       {
-        "id": "customId",
-        "name": "Default color",
-        "description": "Select",
+        "id": "contentTypePrefix",
+        "name": "ContentType",
+        "description": "Select a content type",
         "type": "Enum",
-        "options": [{ "RES23322": "RES23322" }, { "RES23323": "RES23323" }],
-        "labels": {"empty": "Custom Id"},
+        "options": [{ "RES": "RESEARCH" }, { "WEB": "WEBINAR" }, { "BIO": "AUTHOR" }, { "PLA": "PLAYBOOK" }],
+        "labels": {"empty": "Content Type"},
         "required": true
       }
     ]

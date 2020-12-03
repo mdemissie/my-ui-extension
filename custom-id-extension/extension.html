@@ -8,9 +8,6 @@
 <body>
   <div class="cf-form-field">
     <input type="text" class="cf-form-input">
-    <div class="cf-form-hint"> UI Extension to generate content custom id:
-      <span class="default-value"></span>
-    </div>
   </div>
   <script>
     'use strict';
@@ -27,8 +24,8 @@
       window.addEventListener('onbeforeunload', unloadHandler);
 
       var contentTypePrefix = extension.parameters.instance.contentTypePrefix;
-      var customIdText = document.createTextNode(contentTypePrefix+"12338399" || 'none');
-      document.querySelector('.default-value').appendChild(customIdText);
+      //var customIdText = document.createTextNode(contentTypePrefix+"12338399" || 'none');
+      //document.querySelector('.default-value').appendChild(customIdText);
 
       var isNewlyCreated = extension.entry.getSys().version < 2;
       var hasNoValue = typeof extension.field.getValue() === 'undefined';
@@ -42,14 +39,6 @@
 
         if (value !== inputEl.value) {
           inputEl.value = value;
-        }
-
-        if (/^#([a-f0-9]{3}){1,2}$/i.test(value)) {
-          extension.field.setInvalid(false);
-          document.querySelector(".cf-form-field").style.borderLeft = "5px solid " + value;
-        } else {
-          extension.field.setInvalid(true);
-          document.querySelector(".cf-form-field").style.borderLeft = "0";
         }
       }
 
@@ -74,7 +63,8 @@
 			var minNumber = 99999; // The minimum number you want
 			var maxNumber = 99999999; // The maximum number you want
 			var randomnumber = Math.floor(Math.random() * (maxNumber + 1) + minNumber); // Generates random number
-			return (prefix || randomnumber); // Sets content of <div> to number
+      var contentId = prefix.concat(randomnumber);
+			return contentId; // Sets content of <div> to number
 		} 	  
     });   
   </script>
